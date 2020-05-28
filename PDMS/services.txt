@@ -1,0 +1,1 @@
+{"id":0,"clientID":0,"siteManagerID":3,"type":1,"location":"Royal Crescent Road","cost":1600,"stagesID":[0,1,2,3,4,5],"startDate":{"year":2019,"month":4,"dayOfMonth":31,"hourOfDay":0,"minute":0,"second":0},"waitingForSiteManager":false}

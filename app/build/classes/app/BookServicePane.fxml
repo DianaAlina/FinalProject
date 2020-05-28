@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="apBook" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="335.0" style="-fx-background-color: linear-gradient(#ffcc99,#bdccdb) linear-gradient(#ffcc99,#bdccdb);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.BookServiceController">
+   <children>
+      <DatePicker fx:id="date" layoutX="81.0" layoutY="50.0" prefHeight="27.0" prefWidth="174.0" promptText="Choose the date" />
+      <RadioButton fx:id="rbRepair" layoutX="85.0" layoutY="129.0" mnemonicParsing="false" selected="true" text="Repair" />
+      <RadioButton fx:id="rbRefurbishment" layoutX="85.0" layoutY="156.0" mnemonicParsing="false" text="Refurbishment" />
+      <RadioButton fx:id="rbDevelopment" layoutX="85.0" layoutY="183.0" mnemonicParsing="false" text="Development" />
+      <Text layoutX="94.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose the service type:" />
+      <Button fx:id="btnSubmitBook" layoutX="89.0" layoutY="319.0" mnemonicParsing="false" onAction="#book" opacity="0.64" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: black;" text="Submit">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ffc271" />
+                  <Stop color="#9dceeb" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Hyperlink fx:id="back" layoutX="152.0" layoutY="363.0" onAction="#goBack" text="Back" />
+      <Label fx:id="status" layoutX="154.0" layoutY="277.0" text="status" />
+      <TextField fx:id="location" layoutX="77.0" layoutY="234.0" prefHeight="25.0" prefWidth="187.0" promptText="Location" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,6 @@
+{"id":0,"serviceID":0,"name":"Planning permission","finished":false,"workersID":[2]}
+{"id":1,"serviceID":0,"name":"Floor plan","finished":false,"workersID":[]}
+{"id":2,"serviceID":0,"name":"Foundation","finished":false,"workersID":[]}
+{"id":3,"serviceID":0,"name":"Concrete walls and forms","finished":false,"workersID":[]}
+{"id":4,"serviceID":0,"name":"Utilities","finished":false,"workersID":[]}
+{"id":5,"serviceID":0,"name":"Framing and windows","finished":false,"workersID":[]}
