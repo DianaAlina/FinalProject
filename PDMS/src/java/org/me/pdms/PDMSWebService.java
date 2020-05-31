@@ -93,7 +93,7 @@ public class PDMSWebService {
         return gson.toJson(accounts.getAllUsers());
     }
     
-    @WebMethod(operationName = "getAllSiteCandidates")
+    @WebMethod(operationName = "getAllCandidates")
     public String getAllCandidates() {
         Accounts accounts = new Accounts();
         return gson.toJson(accounts.getAllCandidates());
@@ -104,5 +104,62 @@ public class PDMSWebService {
         Accounts accounts = new Accounts();
         return gson.toJson(accounts.getAllVoters());
     }
+
+
+    @WebMethod(operationName = "getUserName")
+    public String getUserName(@WebParam(name = "name") String name) {
+        
+        Accounts accounts = new Accounts();
+        
+        if(!accounts.isUser(name)) return "Provide valid name";
+        
+        return gson.toJson(accounts.findUserByName(name));
+    }
+
+   
+    @WebMethod(operationName = "getUserType")
+    public String getUserType(@WebParam(name = "type") String type) {
+        
+        Accounts accounts = new Accounts();
+        
+        if(!accounts.isUser(type)) return "Provide valid type";
+        
+        return gson.toJson(accounts.findUserByName(type));
+      
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "createElection")
+    public String createElection(
+            @WebParam(name = "description") String description, 
+            @WebParam(name = "can1") String can1, 
+            @WebParam(name = "can2") String can2, 
+            @WebParam(name = "can3") String can3, 
+            @WebParam(name = "can4") String can4, 
+            @WebParam(name = "status") String status) {
+        ElectionList elections = new ElectionList(); 
+        return elections.createElection(
+                description,
+                can1,
+                can2,
+                can3,
+                can4,
+                status
+        );
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "getElecDescription")
+    public String getElecDescription(@WebParam(name = "desc") String desc) {
+        ElectionList election = new ElectionList();
+        //add code here for running elections tab
+        return null;}
+
+    
+    
 }
 

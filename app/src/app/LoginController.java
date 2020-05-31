@@ -35,7 +35,7 @@ public class LoginController implements Initializable {
 
     public TextField txtEmailUnameLogin;
     public Button btnLogin;
-    public Hyperlink hlSignLogin;
+//    public Hyperlink hlSignLogin;
     public Hyperlink hlForgotPassLogin;
     public PasswordField pfPassLogin;
     public Label loginStatus;
@@ -78,12 +78,12 @@ public class LoginController implements Initializable {
         loginStatus.setVisible(false);
     }    
     
-    @FXML
+/*    @FXML
     public void registerButtonAction(ActionEvent event) throws IOException {
                 
         try{
             
-            Parent root = FXMLLoader.load(getClass().getResource("RegisterClient.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("RegisterUser.fxml"));
             Scene scene = new Scene(root);
             
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -94,7 +94,7 @@ public class LoginController implements Initializable {
         } catch(Exception e){
             e.printStackTrace();
         }
-    }
+    }*/
     
     @FXML
     public void forgotPassButtonAction(ActionEvent event){

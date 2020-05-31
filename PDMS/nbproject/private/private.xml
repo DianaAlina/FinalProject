@@ -2,21 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/PDMS/src/java/org/me/pdms/PDMSWebService.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/PDMS/src/java/org/me/pdms/ServicesList.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/PDMS/src/java/org/me/pdms/User.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/PDMS/src/java/org/me/pdms/StagesList.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/PDMS/src/java/org/me/pdms/MessagesList.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/PDMS/test/org/me/pdms/PDMSWebServiceTest.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/PDMS/src/java/org/me/pdms/NotificationsList.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/PDMS/src/java/org/me/pdms/Service.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/PDMS/src/java/org/me/pdms/Stage.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/PDMS/src/java/org/me/pdms/Notification.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/PDMS/src/java/org/me/pdms/Accounts.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/PDMS/src/java/org/me/pdms/Order.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/PDMS/src/java/org/me/pdms/Message.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/PDMS/src/java/org/me/pdms/OrdersList.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

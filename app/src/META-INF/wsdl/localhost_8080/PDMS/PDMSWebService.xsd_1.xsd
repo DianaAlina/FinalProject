@@ -1,124 +1,24 @@
 <?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://pdms.me.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://pdms.me.org/">
 
-<xs:element name="assignSiteManager" type="tns:assignSiteManager"/>
-
-<xs:element name="assignSiteManagerResponse" type="tns:assignSiteManagerResponse"/>
-
-<xs:element name="assignWorker" type="tns:assignWorker"/>
-
-<xs:element name="assignWorkerResponse" type="tns:assignWorkerResponse"/>
-
 <xs:element name="changePassword" type="tns:changePassword"/>
 
 <xs:element name="changePasswordResponse" type="tns:changePasswordResponse"/>
 
-<xs:element name="createMessage" type="tns:createMessage"/>
+<xs:element name="createElection" type="tns:createElection"/>
 
-<xs:element name="createMessageResponse" type="tns:createMessageResponse"/>
+<xs:element name="createElectionResponse" type="tns:createElectionResponse"/>
 
-<xs:element name="createOrder" type="tns:createOrder"/>
+<xs:element name="getAllCandidates" type="tns:getAllCandidates"/>
 
-<xs:element name="createOrderResponse" type="tns:createOrderResponse"/>
-
-<xs:element name="createService" type="tns:createService"/>
-
-<xs:element name="createServiceResponse" type="tns:createServiceResponse"/>
-
-<xs:element name="createStage" type="tns:createStage"/>
-
-<xs:element name="createStageResponse" type="tns:createStageResponse"/>
-
-<xs:element name="deliverOrder" type="tns:deliverOrder"/>
-
-<xs:element name="deliverOrderResponse" type="tns:deliverOrderResponse"/>
-
-<xs:element name="discardNotification" type="tns:discardNotification"/>
-
-<xs:element name="discardNotificationResponse" type="tns:discardNotificationResponse"/>
-
-<xs:element name="finishStage" type="tns:finishStage"/>
-
-<xs:element name="finishStageResponse" type="tns:finishStageResponse"/>
-
-<xs:element name="getAllMessages" type="tns:getAllMessages"/>
-
-<xs:element name="getAllMessagesResponse" type="tns:getAllMessagesResponse"/>
-
-<xs:element name="getAllNotifications" type="tns:getAllNotifications"/>
-
-<xs:element name="getAllNotificationsResponse" type="tns:getAllNotificationsResponse"/>
-
-<xs:element name="getAllOrders" type="tns:getAllOrders"/>
-
-<xs:element name="getAllOrdersResponse" type="tns:getAllOrdersResponse"/>
-
-<xs:element name="getAllServices" type="tns:getAllServices"/>
-
-<xs:element name="getAllServicesResponse" type="tns:getAllServicesResponse"/>
-
-<xs:element name="getAllSiteManagers" type="tns:getAllSiteManagers"/>
-
-<xs:element name="getAllSiteManagersResponse" type="tns:getAllSiteManagersResponse"/>
-
-<xs:element name="getAllStages" type="tns:getAllStages"/>
-
-<xs:element name="getAllStagesResponse" type="tns:getAllStagesResponse"/>
-
-<xs:element name="getAllSuppliers" type="tns:getAllSuppliers"/>
-
-<xs:element name="getAllSuppliersResponse" type="tns:getAllSuppliersResponse"/>
+<xs:element name="getAllCandidatesResponse" type="tns:getAllCandidatesResponse"/>
 
 <xs:element name="getAllUsers" type="tns:getAllUsers"/>
 
 <xs:element name="getAllUsersResponse" type="tns:getAllUsersResponse"/>
 
-<xs:element name="getAllWorkers" type="tns:getAllWorkers"/>
+<xs:element name="getAllVoters" type="tns:getAllVoters"/>
 
-<xs:element name="getAllWorkersResponse" type="tns:getAllWorkersResponse"/>
-
-<xs:element name="getMessagesOfStage" type="tns:getMessagesOfStage"/>
-
-<xs:element name="getMessagesOfStageResponse" type="tns:getMessagesOfStageResponse"/>
-
-<xs:element name="getNotificationsOfUser" type="tns:getNotificationsOfUser"/>
-
-<xs:element name="getNotificationsOfUserResponse" type="tns:getNotificationsOfUserResponse"/>
-
-<xs:element name="getOrder" type="tns:getOrder"/>
-
-<xs:element name="getOrderResponse" type="tns:getOrderResponse"/>
-
-<xs:element name="getOrdersByStage" type="tns:getOrdersByStage"/>
-
-<xs:element name="getOrdersByStageResponse" type="tns:getOrdersByStageResponse"/>
-
-<xs:element name="getOrdersBySupplier" type="tns:getOrdersBySupplier"/>
-
-<xs:element name="getOrdersBySupplierResponse" type="tns:getOrdersBySupplierResponse"/>
-
-<xs:element name="getService" type="tns:getService"/>
-
-<xs:element name="getServiceResponse" type="tns:getServiceResponse"/>
-
-<xs:element name="getServicesOfSiteManager" type="tns:getServicesOfSiteManager"/>
-
-<xs:element name="getServicesOfSiteManagerResponse" type="tns:getServicesOfSiteManagerResponse"/>
-
-<xs:element name="getServicesOfUser" type="tns:getServicesOfUser"/>
-
-<xs:element name="getServicesOfUserResponse" type="tns:getServicesOfUserResponse"/>
-
-<xs:element name="getServicesOfWorker" type="tns:getServicesOfWorker"/>
-
-<xs:element name="getServicesOfWorkerResponse" type="tns:getServicesOfWorkerResponse"/>
-
-<xs:element name="getStage" type="tns:getStage"/>
-
-<xs:element name="getStageResponse" type="tns:getStageResponse"/>
-
-<xs:element name="getUnseenNotificationsOfUser" type="tns:getUnseenNotificationsOfUser"/>
-
-<xs:element name="getUnseenNotificationsOfUserResponse" type="tns:getUnseenNotificationsOfUserResponse"/>
+<xs:element name="getAllVotersResponse" type="tns:getAllVotersResponse"/>
 
 <xs:element name="getUser" type="tns:getUser"/>
 
@@ -126,7 +26,15 @@
 
 <xs:element name="getUserByIDResponse" type="tns:getUserByIDResponse"/>
 
+<xs:element name="getUserName" type="tns:getUserName"/>
+
+<xs:element name="getUserNameResponse" type="tns:getUserNameResponse"/>
+
 <xs:element name="getUserResponse" type="tns:getUserResponse"/>
+
+<xs:element name="getUserType" type="tns:getUserType"/>
+
+<xs:element name="getUserTypeResponse" type="tns:getUserTypeResponse"/>
 
 <xs:element name="logIn" type="tns:logIn"/>
 
@@ -136,232 +44,51 @@
 
 <xs:element name="registerUserResponse" type="tns:registerUserResponse"/>
 
-<xs:element name="setCost" type="tns:setCost"/>
-
-<xs:element name="setCostResponse" type="tns:setCostResponse"/>
-
-<xs:complexType name="deliverOrder">
+<xs:complexType name="registerUser">
 <xs:sequence>
-<xs:element name="orderID" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="deliverOrderResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getAllNotifications">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="getAllNotificationsResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="createStage">
-<xs:sequence>
-<xs:element name="serviceID" type="xs:int"/>
-<xs:element name="name" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="createStageResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getOrdersBySupplier">
-<xs:sequence>
-<xs:element name="supplierID" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getOrdersBySupplierResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getAllOrders">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="getAllOrdersResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="createOrder">
-<xs:sequence>
-<xs:element name="request" type="xs:string" minOccurs="0"/>
-<xs:element name="stageID" type="xs:int"/>
-<xs:element name="userID" type="xs:int"/>
-<xs:element name="supplierID" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="createOrderResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getAllServices">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="getAllServicesResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="setCost">
-<xs:sequence>
-<xs:element name="serviceID" type="xs:int"/>
-<xs:element name="cost" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="setCostResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getUser">
-<xs:sequence>
+<xs:element name="type" type="xs:int"/>
 <xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="birthdate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="organisation" type="xs:string" minOccurs="0"/>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="getUserResponse">
+<xs:complexType name="registerUserResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="finishStage">
-<xs:sequence>
-<xs:element name="stageID" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="finishStageResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getAllWorkers">
+<xs:complexType name="getAllVoters">
 <xs:sequence/>
 </xs:complexType>
 
-<xs:complexType name="getAllWorkersResponse">
+<xs:complexType name="getAllVotersResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="discardNotification">
+<xs:complexType name="getUserName">
 <xs:sequence>
-<xs:element name="notificationID" type="xs:int"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="discardNotificationResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="assignWorker">
-<xs:sequence>
-<xs:element name="stageID" type="xs:int"/>
-<xs:element name="workerID" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="assignWorkerResponse">
+<xs:complexType name="getUserNameResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="getUnseenNotificationsOfUser">
-<xs:sequence>
-<xs:element name="userID" type="xs:int"/>
-</xs:sequence>
+<xs:complexType name="getAllCandidates">
+<xs:sequence/>
 </xs:complexType>
 
-<xs:complexType name="getUnseenNotificationsOfUserResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getOrdersByStage">
-<xs:sequence>
-<xs:element name="stageID" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getOrdersByStageResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getNotificationsOfUser">
-<xs:sequence>
-<xs:element name="userID" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getNotificationsOfUserResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getServicesOfUser">
-<xs:sequence>
-<xs:element name="arg0" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getServicesOfUserResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getService">
-<xs:sequence>
-<xs:element name="serviceID" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getServiceResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="assignSiteManager">
-<xs:sequence>
-<xs:element name="serviceID" type="xs:int"/>
-<xs:element name="siteManagerID" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="assignSiteManagerResponse">
+<xs:complexType name="getAllCandidatesResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>
@@ -393,23 +120,18 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="getServicesOfSiteManager">
+<xs:complexType name="createElection">
 <xs:sequence>
-<xs:element name="arg0" type="xs:int"/>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+<xs:element name="can1" type="xs:string" minOccurs="0"/>
+<xs:element name="can2" type="xs:string" minOccurs="0"/>
+<xs:element name="can3" type="xs:string" minOccurs="0"/>
+<xs:element name="can4" type="xs:string" minOccurs="0"/>
+<xs:element name="status" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="getServicesOfSiteManagerResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getAllStages">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="getAllStagesResponse">
+<xs:complexType name="createElectionResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>
@@ -427,13 +149,13 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="getStage">
+<xs:complexType name="getUserType">
 <xs:sequence>
-<xs:element name="stageID" type="xs:int"/>
+<xs:element name="type" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="getStageResponse">
+<xs:complexType name="getUserTypeResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>
@@ -449,116 +171,13 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="getAllSiteManagers">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="getAllSiteManagersResponse">
+<xs:complexType name="getUser">
 <xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="registerUser">
-<xs:sequence>
-<xs:element name="type" type="xs:int"/>
 <xs:element name="username" type="xs:string" minOccurs="0"/>
-<xs:element name="password" type="xs:string" minOccurs="0"/>
-<xs:element name="name" type="xs:string" minOccurs="0"/>
-<xs:element name="birthdate" type="xs:dateTime" minOccurs="0"/>
-<xs:element name="email" type="xs:string" minOccurs="0"/>
-<xs:element name="phone" type="xs:string" minOccurs="0"/>
-<xs:element name="qualifications" type="xs:string" minOccurs="0"/>
-<xs:element name="materials" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="registerUserResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="createMessage">
-<xs:sequence>
-<xs:element name="stageID" type="xs:int"/>
-<xs:element name="userID" type="xs:int"/>
-<xs:element name="text" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="createMessageResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getAllSuppliers">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="getAllSuppliersResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="createService">
-<xs:sequence>
-<xs:element name="clientID" type="xs:int"/>
-<xs:element name="type" type="xs:int"/>
-<xs:element name="location" type="xs:string" minOccurs="0"/>
-<xs:element name="startDate" type="xs:dateTime" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="createServiceResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getAllMessages">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="getAllMessagesResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getMessagesOfStage">
-<xs:sequence>
-<xs:element name="stageID" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getMessagesOfStageResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getOrder">
-<xs:sequence>
-<xs:element name="orderID" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getOrderResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getServicesOfWorker">
-<xs:sequence>
-<xs:element name="arg0" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getServicesOfWorkerResponse">
+<xs:complexType name="getUserResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>

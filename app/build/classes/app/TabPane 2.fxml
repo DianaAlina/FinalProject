@@ -3,12 +3,13 @@
 <?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -18,15 +19,15 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Text?>
 
-<Pane xmlns="http://javafx.com/javafx/8.0.241" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.TabController">
+<Pane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.TabController">
    <children>
       <TabPane fx:id="tpHome" prefHeight="433.0" prefWidth="335.0" tabClosingPolicy="UNAVAILABLE">
          <tabs>
-            <Tab fx:id="tabServices" style="-fx-background-color: #ffcc99;" text="Active elections">
+            <Tab fx:id="tabElections" style="-fx-background-color: #ffcc99;" text="Active elections">
                <content>
-                  <AnchorPane fx:id="apServices" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(#ffcc99,#bdccdb) linear-gradient(#ffcc99,#bdccdb);">
+                  <AnchorPane fx:id="apElections" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(#ffcc99,#bdccdb) linear-gradient(#ffcc99,#bdccdb);">
                      <children>
-                        <Text layoutX="56.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No data yet" textAlignment="CENTER" wrappingWidth="222.22900390625" />
+                        <Text fx:id="tElectionDesc" layoutX="56.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No data yet" textAlignment="CENTER" wrappingWidth="222.22900390625" />
                         <GridPane layoutX="18.0" layoutY="68.0" prefHeight="202.0" prefWidth="298.0">
                           <columnConstraints>
                             <ColumnConstraints hgrow="SOMETIMES" maxWidth="276.0" minWidth="10.0" prefWidth="236.0" />
@@ -39,91 +40,116 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Candidate 1">
+                              <Text fx:id="tC1" strokeType="OUTSIDE" strokeWidth="0.0" text="Candidate 1">
                                  <GridPane.margin>
                                     <Insets left="5.0" />
                                  </GridPane.margin>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Candidate 2" GridPane.rowIndex="1">
+                              <Text fx:id="tC2" strokeType="OUTSIDE" strokeWidth="0.0" text="Candidate 2" GridPane.rowIndex="1">
                                  <GridPane.margin>
                                     <Insets left="5.0" />
                                  </GridPane.margin>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Candidate 4" GridPane.rowIndex="3">
+                              <Text fx:id="tC3" strokeType="OUTSIDE" strokeWidth="0.0" text="Candidate 4" GridPane.rowIndex="3">
                                  <GridPane.margin>
                                     <Insets left="5.0" />
                                  </GridPane.margin>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Candidate 3" GridPane.rowIndex="2">
+                              <Text fx:id="tC4" strokeType="OUTSIDE" strokeWidth="0.0" text="Candidate 3" GridPane.rowIndex="2">
                                  <GridPane.margin>
                                     <Insets left="5.0" />
                                  </GridPane.margin>
                               </Text>
-                              <Button mnemonicParsing="false" text="Vote" GridPane.columnIndex="1">
+                              <Button fx:id="btnVoteC1" mnemonicParsing="false" text="Vote" GridPane.columnIndex="1">
                                  <GridPane.margin>
                                     <Insets left="10.0" />
                                  </GridPane.margin>
                               </Button>
-                              <Button mnemonicParsing="false" text="Vote" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <Button fx:id="btnVoteC2" mnemonicParsing="false" text="Vote" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <GridPane.margin>
                                     <Insets left="10.0" />
                                  </GridPane.margin>
                               </Button>
-                              <Button mnemonicParsing="false" text="Vote" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <Button fx:id="btnVoteC3" mnemonicParsing="false" text="Vote" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <GridPane.margin>
                                     <Insets left="10.0" />
                                  </GridPane.margin>
                               </Button>
-                              <Button mnemonicParsing="false" text="Vote" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <Button fx:id="btnVoteC4" mnemonicParsing="false" text="Vote" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                  <GridPane.margin>
                                     <Insets left="10.0" />
                                  </GridPane.margin>
                               </Button>
                            </children>
                         </GridPane>
-                        <Button layoutX="226.0" layoutY="352.0" mnemonicParsing="false" text="Stop election" />
+                        <Button fx:id="btnStop" layoutX="226.0" layoutY="352.0" mnemonicParsing="false" text="Stop election" />
                      </children>
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab fx:id="tabNotifications" style="-fx-background-color: #ffcc99;" text="Create Election">
+            <Tab fx:id="tabCreateElec" style="-fx-background-color: #ffcc99;" text="Create Election">
                <content>
-                  <AnchorPane fx:id="apNotifications" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(#ffcc99,#bdccdb) linear-gradient(#ffcc99,#bdccdb);">
+                  <AnchorPane fx:id="apCreateElec" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(#ffcc99,#bdccdb) linear-gradient(#ffcc99,#bdccdb);">
                      <children>
-                        <MenuButton layoutX="77.0" layoutY="121.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="181.0" text="Candidate">
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="null" />
-                            <MenuItem mnemonicParsing="false" text="null" />
-                              <MenuItem mnemonicParsing="false" text="null" />
-                              <MenuItem mnemonicParsing="false" text="null" />
-                          </items>
-                        </MenuButton>
-                        <MenuButton layoutX="77.0" layoutY="173.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="181.0" text="Candidate">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="null" />
-                              <MenuItem mnemonicParsing="false" text="null" />
-                              <MenuItem mnemonicParsing="false" text="null" />
-                              <MenuItem mnemonicParsing="false" text="null" />
-                           </items>
-                        </MenuButton>
-                        <MenuButton layoutX="77.0" layoutY="224.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="181.0" text="Candidate">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="null" />
-                              <MenuItem mnemonicParsing="false" text="null" />
-                              <MenuItem mnemonicParsing="false" text="null" />
-                              <MenuItem mnemonicParsing="false" text="null" />
-                           </items>
-                        </MenuButton>
-                        <MenuButton layoutX="77.0" layoutY="272.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="181.0" text="Candidate">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="null" />
-                              <MenuItem mnemonicParsing="false" text="null" />
-                              <MenuItem mnemonicParsing="false" text="null" />
-                              <MenuItem mnemonicParsing="false" text="null" />
-                           </items>
-                        </MenuButton>
-                        <TextArea layoutX="62.0" layoutY="36.0" prefHeight="72.0" prefWidth="208.0" promptText="About this election" />
-                        <Button fx:id="btnChangePassword2" layoutX="78.0" layoutY="326.0" mnemonicParsing="false" onAction="#changePass" opacity="0.49" prefHeight="19.0" prefWidth="177.0" style="-fx-background-color: black;" text="Create">
+                        <TextArea fx:id="taCreateDesc" layoutX="64.0" layoutY="62.0" prefHeight="72.0" prefWidth="208.0" promptText="About this election" />
+                        <Button fx:id="btnCreateElec" onAction="#createElec" layoutX="80.0" layoutY="352.0" mnemonicParsing="false" opacity="0.49" prefHeight="19.0" prefWidth="177.0" style="-fx-background-color: black;" text="Create">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#ffc271" />
+                                    <Stop color="#65b5b4" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Button>
+                        <ChoiceBox fx:id="cbC1" layoutX="95.0" layoutY="160.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="cbC2" layoutX="95.0" layoutY="199.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="cbC3" layoutX="95.0" layoutY="241.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="cbC4" layoutX="95.0" layoutY="282.0" prefWidth="150.0" />
+                        </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabAddUs" style="-fx-background-color: #ffcc99;" text="Add user">
+               <content>
+                  <AnchorPane fx:id="apAddUs" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(#ffcc99,#bdccdb) linear-gradient(#ffcc99,#bdccdb);">
+                     <children>
+                        <GridPane fx:id="gpAddUs" layoutX="24.0" layoutY="24.0" prefHeight="295.0" prefWidth="289.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.0" minWidth="10.0" prefWidth="99.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="205.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date of birth" GridPane.rowIndex="4" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Organisation" GridPane.rowIndex="5" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Description" GridPane.rowIndex="6" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="7" />
+                              <TextField fx:id="tfName" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="tfOrganisation" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField fx:id="tfDescription" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name" GridPane.rowIndex="3" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Username" GridPane.rowIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password" GridPane.rowIndex="2" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="8" />
+                              <TextField fx:id="tfUsername" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="tfPassword" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <DatePicker fx:id="dpUsDOB" prefHeight="27.0" prefWidth="208.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <ChoiceBox fx:id="cbType" prefHeight="27.0" prefWidth="212.0" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                        <Button fx:id="btnRegister" layoutX="79.0" layoutY="319.0" mnemonicParsing="false" onAction="#registerUs" opacity="0.49" prefHeight="19.0" prefWidth="177.0" style="-fx-background-color: black;" text="Register">
                            <textFill>
                               <LinearGradient endX="1.0" endY="1.0">
                                  <stops>
@@ -137,51 +163,37 @@
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab fx:id="tabProfile" style="-fx-background-color: #ffcc99;" text="Add candidate">
+            <Tab fx:id="tabResults" style="-fx-background-color: #ffcc99;" text="Results">
                <content>
-                  <AnchorPane fx:id="apProfile" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(#ffcc99,#bdccdb) linear-gradient(#ffcc99,#bdccdb);">
+                  <AnchorPane fx:id="apResults" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(#ffcc99,#bdccdb) linear-gradient(#ffcc99,#bdccdb);">
                      <children>
-                        <Text layoutX="105.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
-                        <Button fx:id="btnChangePassword" layoutX="79.0" layoutY="247.0" mnemonicParsing="false" onAction="#changePass" opacity="0.49" prefHeight="19.0" prefWidth="177.0" style="-fx-background-color: black;" text="Change Password">
-                           <textFill>
-                              <LinearGradient endX="1.0" endY="1.0">
-                                 <stops>
-                                    <Stop color="#ffc271" />
-                                    <Stop color="#65b5b4" offset="1.0" />
-                                 </stops>
-                              </LinearGradient>
-                           </textFill>
-                        </Button>
-                        <Text fx:id="name" layoutX="177.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Javi" />
-                        <Button fx:id="btnRegUs" layoutX="79.0" layoutY="295.0" mnemonicParsing="false" onAction="#registerEmployee" opacity="0.49" prefHeight="19.0" prefWidth="177.0" style="-fx-background-color: black;" text="Register user">
-                           <textFill>
-                              <LinearGradient endX="1.0" endY="1.0">
-                                 <stops>
-                                    <Stop color="#ffc271" />
-                                    <Stop color="#65b5b4" offset="1.0" />
-                                 </stops>
-                              </LinearGradient>
-                           </textFill>
-                        </Button>
-                        <Text layoutX="107.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Full name:" />
-                        <Text layoutX="67.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact number:" />
-                        <Text layoutX="131.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" />
-                        <Text fx:id="fullname" layoutX="177.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Javi" />
-                        <Text fx:id="number" layoutX="177.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Javi" />
-                        <Text fx:id="email" layoutX="177.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Javi" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-            <Tab fx:id="tabProfile1" style="-fx-background-color: #ffcc99;" text="Results">
-               <content>
-                  <AnchorPane fx:id="apProfile1" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(#ffcc99,#bdccdb) linear-gradient(#ffcc99,#bdccdb);">
-                     <children>
-                        <ListView fx:id="lvServices" layoutX="40.0" layoutY="35.0" prefHeight="320.0" prefWidth="256.0">
+                        <ListView fx:id="lvResults" layoutX="40.0" layoutY="35.0" prefHeight="320.0" prefWidth="256.0">
                            <items>
                               <FXCollections fx:factory="observableArrayList" />
                            </items>
                         </ListView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabProfile" style="-fx-background-color: #ffcc99;" text="Profile">
+               <content>
+                  <AnchorPane fx:id="apProfile" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(#ffcc99,#bdccdb) linear-gradient(#ffcc99,#bdccdb);">
+                     <children>
+                        <Button fx:id="btnChangePass" layoutX="79.0" layoutY="218.0" mnemonicParsing="false" onAction="#changePass" opacity="0.49" prefHeight="19.0" prefWidth="177.0" style="-fx-background-color: black;" text="Change Password">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#ffc271" />
+                                    <Stop color="#65b5b4" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Button>
+                        <Text layoutX="151.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                        <Text fx:id="tName" layoutX="36.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USER" textAlignment="CENTER" wrappingWidth="262.73193359375" />
+                        <Text layoutX="153.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type" />
+                        <Text fx:id="tType" layoutX="36.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USER TYPE" textAlignment="CENTER" wrappingWidth="262.73193359375" />
                      </children>
                   </AnchorPane>
                </content>

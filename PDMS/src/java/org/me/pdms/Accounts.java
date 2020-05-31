@@ -68,6 +68,17 @@ public class Accounts {
         return null;
     }
     
+    public User findUserByName(String name){
+        for (User user : users.values()){
+            if (user.getName().equals(name)) return user;
+        }
+        return null;
+    }
+    
+    public User findUserByType(int type){
+        return users.get(type);
+    }
+    
     public User findUserByID(int id) {
         
         return users.get(id);

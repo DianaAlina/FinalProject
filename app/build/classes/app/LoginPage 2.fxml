@@ -52,12 +52,7 @@
                   <Insets left="25.0" right="25.0" />
                </padding>
             </Button>
-            <Hyperlink fx:id="hlSignLogin" layoutX="50.0" layoutY="375.0" onAction="#registerButtonAction" prefHeight="12.0" prefWidth="151.0" text="Don't have an account?" textFill="#4b7dc9" underline="true">
-               <font>
-                  <Font size="10.0" />
-               </font>
-            </Hyperlink>
-            <Hyperlink fx:id="hlForgotPassLogin" layoutX="160.0" layoutY="219.0" onAction="#forgotPassButtonAction" prefHeight="12.0" prefWidth="151.0" text="Forgot your password?" textFill="#4b7dc9" underline="true">
+            <Hyperlink fx:id="hlForgotPassLogin" layoutX="171.0" layoutY="219.0" onAction="#forgotPassButtonAction" prefHeight="40.0" prefWidth="110.0" text="Forgot your password &#10;or want to change it?" textFill="#4b7dc9" underline="true">
                <font>
                   <Font size="10.0" />
                </font>

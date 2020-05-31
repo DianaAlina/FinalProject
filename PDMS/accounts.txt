@@ -1,1 +1,1 @@
-{"id":0,"type":1,"username":"diana","password":"diana","name":"Diana","birthdate":{"year":2000,"month":4,"dayOfMonth":1,"hourOfDay":0,"minute":0,"second":0}}
+{"id":0,"type":0,"username":"diana","password":"diana","name":"Diana","birthdate":{"year":2000,"month":4,"dayOfMonth":1,"hourOfDay":0,"minute":0,"second":0}}

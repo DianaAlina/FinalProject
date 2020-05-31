@@ -2,9 +2,15 @@ package app;
 
 import com.google.gson.Gson;
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.ArrayList;
+import java.util.GregorianCalendar;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -17,15 +23,16 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.Tab;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-import model.Notification;
-import model.Order;
-import model.ServicePDMS;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
 import model.User;
 
 /**
@@ -37,7 +44,6 @@ public class TabController implements Initializable, HomePaneController {
     private HomeController parent;
     
     private User user;
-    private ServicePDMS[] services;
     
     //Elections tab
     public Tab tabElections;
@@ -57,19 +63,20 @@ public class TabController implements Initializable, HomePaneController {
     public Tab tabCreateElec;
     public AnchorPane apCreateElec;
     public Button btnCreateElec;
-    public CheckBox cbC1;
-    public CheckBox cbC2;
-    public CheckBox cbC3;
-    public CheckBox cbC4;
+    public TextArea taCreateDesc;
+    public ChoiceBox cbC1;
+    public ChoiceBox cbC2;
+    public ChoiceBox cbC3;
+    public ChoiceBox cbC4;
     
-    //Add Candidate tab
-    public Tab tabAddCand;
-    public AnchorPane apAddCand;
-    public GridPane gpAddCand;
+    //Add User tab
+    public Tab tabAddUs;
+    public AnchorPane apAddUs;
+    public GridPane gpAddUs;
     public TextField tfName;
     public TextField tfOrganisation;
     public TextField tfDescription;
-    public TextField tfUSername;
+    public TextField tfUsername;
     public TextField tfPassword;
     public DatePicker dpUsDOB;
     public ChoiceBox cbType;
@@ -80,40 +87,69 @@ public class TabController implements Initializable, HomePaneController {
     public AnchorPane apResults;
     public ListView lvResults;
     
+    //Profile tab
+    public Tab tabProfile;
+    public AnchorPane apProfile;
+    public Button btnChangePass;
+    public Text tName;
+    public Text tType;
+    
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+      
+        cbType.getItems().add(User.TYPES[User.VOTER]);
+        cbType.getItems().add(User.TYPES[User.CANDIDATE]);
         
-        lvResults.setCellFactory(new Callback<ListView<Notification>, ListCell<Notification>>() {
-            @Override
-            public ListCell<Notification> call(ListView<Notification> param) {
-                return new NotiCell();
-            }
-        });
+        User[] candidates = (new Gson()).fromJson(getAllCandidates(), User[].class);
+
+            for (User user : candidates) {
+               
+                    cbC1.getItems().add(user.getName());
+                    cbC2.getItems().add(user.getName());
+                    cbC3.getItems().add(user.getName());
+                    cbC4.getItems().add(user.getName());
+                } 
     }
+    
+ 
     
     @Override
     public void setUser(User user) {
         this.user = user;
                
-        // Tab Add Candidate
+        // Tab Create election and Add user 
         
-        if (user.getType() == User.VOTER || user.getType() == User.CANDIDATE ) 
-            tabAddCand.isDisabled();
         
-        if (user.getType() == User.VOTER  || user.getType() == User.CANDIDATE )
-            btnRegister.setVisible(false);
+        if (user.getType() == User.VOTER || user.getType() == User.CANDIDATE ) {
+            tabAddUs.setDisable(true);
+            tabCreateElec.setDisable(true);
+            btnStop.setVisible(false);
+            tName.setText(user.getName());
+            if (user.getType() == User.VOTER)
+                tType.setText("VOTER");
+            else if (user.getType() == User.CANDIDATE){
+                tType.setText("CANDIDATE");
+                btnVoteC1.setVisible(false);
+                btnVoteC2.setVisible(false);
+                btnVoteC3.setVisible(false);
+                btnVoteC4.setVisible(false);
+            }
+        }
+        else {
+            tabAddUs.setDisable(false);
+            tabCreateElec.setDisable(false);
+            btnStop.setVisible(true);
+            
+            tName.setText(user.getName());
+            tType.setText("ADMIN");
+        }
+        
+        
     }
     
     @Override
     public void setParent(HomeController home) { parent = home;  }
-    
-/*    public void bookService(ActionEvent ac) {
-        
-        parent.changeMainPane("BookServicePane.fxml");
-    }
-    
-*/
+
 
     public void changePass(ActionEvent ac) {
         try{
@@ -128,50 +164,83 @@ public class TabController implements Initializable, HomePaneController {
 
         } catch(Exception e){ e.printStackTrace(); }
     }
+   
+        @FXML
+    public void registerUs(ActionEvent ac) {
+        
+        try {
+            int type = cbType.getSelectionModel().getSelectedIndex()+1;
+            String username = tfUsername.getText();
+            String password = tfPassword.getText();
+            String name = tfName.getText();
+            LocalDate birthdate = dpUsDOB.getValue();
+            GregorianCalendar gcal = GregorianCalendar.from(birthdate.atStartOfDay(ZoneId.systemDefault()));
+            XMLGregorianCalendar xcal = DatatypeFactory.newInstance().newXMLGregorianCalendar(gcal);
+            String organisation = tfOrganisation.getText();
+            String description = tfDescription.getText();
+
+           
+            String result = registerUser(type, username, password, name, 
+                    xcal,
+                    organisation, description);
+            
+            if (result.equals("Success")) {
+                parent.changeMainPane("TabPane.fxml");
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            btnRegister.setText("action not performed");
+        }       
+    }
+    @FXML
+    public void createElec(ActionEvent ac){
+        try{ String desc = taCreateDesc.getText();
+        String can1 = (String) cbC1.getValue();
+        String can2 = (String) cbC2.getValue();
+        String can3 = (String) cbC3.getValue();
+        String can4 = (String) cbC4.getValue();
+        String status = "START";
+        
+        String res = createElection(desc, can1, can2, can3, can4, status);
+        
+        if (res.equals("Success")){
+            btnCreateElec.setText("election created");
+        }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            btnCreateElec.setText("action not performed");
+        }     
+    }
+
     
-  /*  public void registerEmployee(ActionEvent ac) {
-        parent.changeMainPane("RegUsPane.fxml");
-    }*/
+    private static String registerUser(int type, java.lang.String username, java.lang.String password, java.lang.String name, javax.xml.datatype.XMLGregorianCalendar birthdate, java.lang.String organisation, java.lang.String description) {
+        org.me.pdms.PDMSWebService_Service service = new org.me.pdms.PDMSWebService_Service();
+        org.me.pdms.PDMSWebService port = service.getPDMSWebServicePort();
+        return port.registerUser(type, username, password, name, birthdate, organisation, description);
+    }
     
-    private static String getServicesOfUser(int arg0) {
+    private static String getUser(java.lang.String username) {
         org.me.pdms.PDMSWebService_Service service = new org.me.pdms.PDMSWebService_Service();
         org.me.pdms.PDMSWebService port = service.getPDMSWebServicePort();
-        return port.getServicesOfUser(arg0);
+        return port.getUser(username);
     }
 
-    private static String getNotificationsOfUser(int userID) {
+    private static String getAllCandidates() {
         org.me.pdms.PDMSWebService_Service service = new org.me.pdms.PDMSWebService_Service();
         org.me.pdms.PDMSWebService port = service.getPDMSWebServicePort();
-        return port.getNotificationsOfUser(userID);
+        return port.getAllCandidates();
     }
 
-    private static String getAllServices() {
+    private static String createElection(java.lang.String desc, java.lang.String can1, java.lang.String can2, java.lang.String can3, java.lang.String can4, java.lang.String status) {
         org.me.pdms.PDMSWebService_Service service = new org.me.pdms.PDMSWebService_Service();
         org.me.pdms.PDMSWebService port = service.getPDMSWebServicePort();
-        return port.getAllServices();
+        return port.createElection(desc, can1, can2, can3, can4, status);
     }
 
-    private static String getServicesOfSiteManager(int arg0) {
-        org.me.pdms.PDMSWebService_Service service = new org.me.pdms.PDMSWebService_Service();
-        org.me.pdms.PDMSWebService port = service.getPDMSWebServicePort();
-        return port.getServicesOfSiteManager(arg0);
-    }
-
-    private static String getServicesOfWorker(int arg0) {
-        org.me.pdms.PDMSWebService_Service service = new org.me.pdms.PDMSWebService_Service();
-        org.me.pdms.PDMSWebService port = service.getPDMSWebServicePort();
-        return port.getServicesOfWorker(arg0);
-    }
-
-    private static String getOrdersBySupplier(int supplierID) {
-        org.me.pdms.PDMSWebService_Service service = new org.me.pdms.PDMSWebService_Service();
-        org.me.pdms.PDMSWebService port = service.getPDMSWebServicePort();
-        return port.getOrdersBySupplier(supplierID);
-    }
-
-    private static String deliverOrder(int orderID) {
-        org.me.pdms.PDMSWebService_Service service = new org.me.pdms.PDMSWebService_Service();
-        org.me.pdms.PDMSWebService port = service.getPDMSWebServicePort();
-        return port.deliverOrder(orderID);
-    }
+    
+   
 }

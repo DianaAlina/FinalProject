@@ -4,41 +4,47 @@
 <xsd:import namespace="http://pdms.me.org/" schemaLocation="http://localhost:8080/PDMS/PDMSWebService?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="getAllOrders">
-<part name="parameters" element="tns:getAllOrders"/>
+<message name="changePassword">
+<part name="parameters" element="tns:changePassword"/>
 </message>
-<message name="getAllOrdersResponse">
-<part name="parameters" element="tns:getAllOrdersResponse"/>
+<message name="changePasswordResponse">
+<part name="parameters" element="tns:changePasswordResponse"/>
 </message>
-<message name="getAllMessages">
-<part name="parameters" element="tns:getAllMessages"/>
+<message name="getUserName">
+<part name="parameters" element="tns:getUserName"/>
 </message>
-<message name="getAllMessagesResponse">
-<part name="parameters" element="tns:getAllMessagesResponse"/>
+<message name="getUserNameResponse">
+<part name="parameters" element="tns:getUserNameResponse"/>
 </message>
-<message name="getOrdersByStage">
-<part name="parameters" element="tns:getOrdersByStage"/>
+<message name="logIn">
+<part name="parameters" element="tns:logIn"/>
 </message>
-<message name="getOrdersByStageResponse">
-<part name="parameters" element="tns:getOrdersByStageResponse"/>
+<message name="logInResponse">
+<part name="parameters" element="tns:logInResponse"/>
 </message>
-<message name="deliverOrder">
-<part name="parameters" element="tns:deliverOrder"/>
+<message name="getUser">
+<part name="parameters" element="tns:getUser"/>
 </message>
-<message name="deliverOrderResponse">
-<part name="parameters" element="tns:deliverOrderResponse"/>
+<message name="getUserResponse">
+<part name="parameters" element="tns:getUserResponse"/>
 </message>
-<message name="getService">
-<part name="parameters" element="tns:getService"/>
+<message name="createElection">
+<part name="parameters" element="tns:createElection"/>
 </message>
-<message name="getServiceResponse">
-<part name="parameters" element="tns:getServiceResponse"/>
+<message name="createElectionResponse">
+<part name="parameters" element="tns:createElectionResponse"/>
 </message>
-<message name="getStage">
-<part name="parameters" element="tns:getStage"/>
+<message name="registerUser">
+<part name="parameters" element="tns:registerUser"/>
 </message>
-<message name="getStageResponse">
-<part name="parameters" element="tns:getStageResponse"/>
+<message name="registerUserResponse">
+<part name="parameters" element="tns:registerUserResponse"/>
+</message>
+<message name="getAllCandidates">
+<part name="parameters" element="tns:getAllCandidates"/>
+</message>
+<message name="getAllCandidatesResponse">
+<part name="parameters" element="tns:getAllCandidatesResponse"/>
 </message>
 <message name="getUserByID">
 <part name="parameters" element="tns:getUserByID"/>
@@ -52,192 +58,46 @@
 <message name="getAllUsersResponse">
 <part name="parameters" element="tns:getAllUsersResponse"/>
 </message>
-<message name="getAllSuppliers">
-<part name="parameters" element="tns:getAllSuppliers"/>
+<message name="getAllVoters">
+<part name="parameters" element="tns:getAllVoters"/>
 </message>
-<message name="getAllSuppliersResponse">
-<part name="parameters" element="tns:getAllSuppliersResponse"/>
+<message name="getAllVotersResponse">
+<part name="parameters" element="tns:getAllVotersResponse"/>
 </message>
-<message name="createStage">
-<part name="parameters" element="tns:createStage"/>
+<message name="getUserType">
+<part name="parameters" element="tns:getUserType"/>
 </message>
-<message name="createStageResponse">
-<part name="parameters" element="tns:createStageResponse"/>
-</message>
-<message name="logIn">
-<part name="parameters" element="tns:logIn"/>
-</message>
-<message name="logInResponse">
-<part name="parameters" element="tns:logInResponse"/>
-</message>
-<message name="registerUser">
-<part name="parameters" element="tns:registerUser"/>
-</message>
-<message name="registerUserResponse">
-<part name="parameters" element="tns:registerUserResponse"/>
-</message>
-<message name="getAllSiteManagers">
-<part name="parameters" element="tns:getAllSiteManagers"/>
-</message>
-<message name="getAllSiteManagersResponse">
-<part name="parameters" element="tns:getAllSiteManagersResponse"/>
-</message>
-<message name="getNotificationsOfUser">
-<part name="parameters" element="tns:getNotificationsOfUser"/>
-</message>
-<message name="getNotificationsOfUserResponse">
-<part name="parameters" element="tns:getNotificationsOfUserResponse"/>
-</message>
-<message name="discardNotification">
-<part name="parameters" element="tns:discardNotification"/>
-</message>
-<message name="discardNotificationResponse">
-<part name="parameters" element="tns:discardNotificationResponse"/>
-</message>
-<message name="getAllNotifications">
-<part name="parameters" element="tns:getAllNotifications"/>
-</message>
-<message name="getAllNotificationsResponse">
-<part name="parameters" element="tns:getAllNotificationsResponse"/>
-</message>
-<message name="getOrdersBySupplier">
-<part name="parameters" element="tns:getOrdersBySupplier"/>
-</message>
-<message name="getOrdersBySupplierResponse">
-<part name="parameters" element="tns:getOrdersBySupplierResponse"/>
-</message>
-<message name="getMessagesOfStage">
-<part name="parameters" element="tns:getMessagesOfStage"/>
-</message>
-<message name="getMessagesOfStageResponse">
-<part name="parameters" element="tns:getMessagesOfStageResponse"/>
-</message>
-<message name="getServicesOfUser">
-<part name="parameters" element="tns:getServicesOfUser"/>
-</message>
-<message name="getServicesOfUserResponse">
-<part name="parameters" element="tns:getServicesOfUserResponse"/>
-</message>
-<message name="assignWorker">
-<part name="parameters" element="tns:assignWorker"/>
-</message>
-<message name="assignWorkerResponse">
-<part name="parameters" element="tns:assignWorkerResponse"/>
-</message>
-<message name="assignSiteManager">
-<part name="parameters" element="tns:assignSiteManager"/>
-</message>
-<message name="assignSiteManagerResponse">
-<part name="parameters" element="tns:assignSiteManagerResponse"/>
-</message>
-<message name="getUnseenNotificationsOfUser">
-<part name="parameters" element="tns:getUnseenNotificationsOfUser"/>
-</message>
-<message name="getUnseenNotificationsOfUserResponse">
-<part name="parameters" element="tns:getUnseenNotificationsOfUserResponse"/>
-</message>
-<message name="setCost">
-<part name="parameters" element="tns:setCost"/>
-</message>
-<message name="setCostResponse">
-<part name="parameters" element="tns:setCostResponse"/>
-</message>
-<message name="createService">
-<part name="parameters" element="tns:createService"/>
-</message>
-<message name="createServiceResponse">
-<part name="parameters" element="tns:createServiceResponse"/>
-</message>
-<message name="getAllServices">
-<part name="parameters" element="tns:getAllServices"/>
-</message>
-<message name="getAllServicesResponse">
-<part name="parameters" element="tns:getAllServicesResponse"/>
-</message>
-<message name="getUser">
-<part name="parameters" element="tns:getUser"/>
-</message>
-<message name="getUserResponse">
-<part name="parameters" element="tns:getUserResponse"/>
-</message>
-<message name="getAllWorkers">
-<part name="parameters" element="tns:getAllWorkers"/>
-</message>
-<message name="getAllWorkersResponse">
-<part name="parameters" element="tns:getAllWorkersResponse"/>
-</message>
-<message name="changePassword">
-<part name="parameters" element="tns:changePassword"/>
-</message>
-<message name="changePasswordResponse">
-<part name="parameters" element="tns:changePasswordResponse"/>
-</message>
-<message name="getOrder">
-<part name="parameters" element="tns:getOrder"/>
-</message>
-<message name="getOrderResponse">
-<part name="parameters" element="tns:getOrderResponse"/>
-</message>
-<message name="createMessage">
-<part name="parameters" element="tns:createMessage"/>
-</message>
-<message name="createMessageResponse">
-<part name="parameters" element="tns:createMessageResponse"/>
-</message>
-<message name="finishStage">
-<part name="parameters" element="tns:finishStage"/>
-</message>
-<message name="finishStageResponse">
-<part name="parameters" element="tns:finishStageResponse"/>
-</message>
-<message name="getAllStages">
-<part name="parameters" element="tns:getAllStages"/>
-</message>
-<message name="getAllStagesResponse">
-<part name="parameters" element="tns:getAllStagesResponse"/>
-</message>
-<message name="createOrder">
-<part name="parameters" element="tns:createOrder"/>
-</message>
-<message name="createOrderResponse">
-<part name="parameters" element="tns:createOrderResponse"/>
-</message>
-<message name="getServicesOfWorker">
-<part name="parameters" element="tns:getServicesOfWorker"/>
-</message>
-<message name="getServicesOfWorkerResponse">
-<part name="parameters" element="tns:getServicesOfWorkerResponse"/>
-</message>
-<message name="getServicesOfSiteManager">
-<part name="parameters" element="tns:getServicesOfSiteManager"/>
-</message>
-<message name="getServicesOfSiteManagerResponse">
-<part name="parameters" element="tns:getServicesOfSiteManagerResponse"/>
+<message name="getUserTypeResponse">
+<part name="parameters" element="tns:getUserTypeResponse"/>
 </message>
 <portType name="PDMSWebService">
-<operation name="getAllOrders">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/getAllOrdersRequest" message="tns:getAllOrders"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/getAllOrdersResponse" message="tns:getAllOrdersResponse"/>
+<operation name="changePassword">
+<input wsam:Action="http://pdms.me.org/PDMSWebService/changePasswordRequest" message="tns:changePassword"/>
+<output wsam:Action="http://pdms.me.org/PDMSWebService/changePasswordResponse" message="tns:changePasswordResponse"/>
 </operation>
-<operation name="getAllMessages">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/getAllMessagesRequest" message="tns:getAllMessages"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/getAllMessagesResponse" message="tns:getAllMessagesResponse"/>
+<operation name="getUserName">
+<input wsam:Action="http://pdms.me.org/PDMSWebService/getUserNameRequest" message="tns:getUserName"/>
+<output wsam:Action="http://pdms.me.org/PDMSWebService/getUserNameResponse" message="tns:getUserNameResponse"/>
 </operation>
-<operation name="getOrdersByStage">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/getOrdersByStageRequest" message="tns:getOrdersByStage"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/getOrdersByStageResponse" message="tns:getOrdersByStageResponse"/>
+<operation name="logIn">
+<input wsam:Action="http://pdms.me.org/PDMSWebService/logInRequest" message="tns:logIn"/>
+<output wsam:Action="http://pdms.me.org/PDMSWebService/logInResponse" message="tns:logInResponse"/>
 </operation>
-<operation name="deliverOrder">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/deliverOrderRequest" message="tns:deliverOrder"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/deliverOrderResponse" message="tns:deliverOrderResponse"/>
+<operation name="getUser">
+<input wsam:Action="http://pdms.me.org/PDMSWebService/getUserRequest" message="tns:getUser"/>
+<output wsam:Action="http://pdms.me.org/PDMSWebService/getUserResponse" message="tns:getUserResponse"/>
 </operation>
-<operation name="getService">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/getServiceRequest" message="tns:getService"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/getServiceResponse" message="tns:getServiceResponse"/>
+<operation name="createElection">
+<input wsam:Action="http://pdms.me.org/PDMSWebService/createElectionRequest" message="tns:createElection"/>
+<output wsam:Action="http://pdms.me.org/PDMSWebService/createElectionResponse" message="tns:createElectionResponse"/>
 </operation>
-<operation name="getStage">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/getStageRequest" message="tns:getStage"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/getStageResponse" message="tns:getStageResponse"/>
+<operation name="registerUser">
+<input wsam:Action="http://pdms.me.org/PDMSWebService/registerUserRequest" message="tns:registerUser"/>
+<output wsam:Action="http://pdms.me.org/PDMSWebService/registerUserResponse" message="tns:registerUserResponse"/>
+</operation>
+<operation name="getAllCandidates">
+<input wsam:Action="http://pdms.me.org/PDMSWebService/getAllCandidatesRequest" message="tns:getAllCandidates"/>
+<output wsam:Action="http://pdms.me.org/PDMSWebService/getAllCandidatesResponse" message="tns:getAllCandidatesResponse"/>
 </operation>
 <operation name="getUserByID">
 <input wsam:Action="http://pdms.me.org/PDMSWebService/getUserByIDRequest" message="tns:getUserByID"/>
@@ -247,118 +107,18 @@
 <input wsam:Action="http://pdms.me.org/PDMSWebService/getAllUsersRequest" message="tns:getAllUsers"/>
 <output wsam:Action="http://pdms.me.org/PDMSWebService/getAllUsersResponse" message="tns:getAllUsersResponse"/>
 </operation>
-<operation name="getAllSuppliers">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/getAllSuppliersRequest" message="tns:getAllSuppliers"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/getAllSuppliersResponse" message="tns:getAllSuppliersResponse"/>
+<operation name="getAllVoters">
+<input wsam:Action="http://pdms.me.org/PDMSWebService/getAllVotersRequest" message="tns:getAllVoters"/>
+<output wsam:Action="http://pdms.me.org/PDMSWebService/getAllVotersResponse" message="tns:getAllVotersResponse"/>
 </operation>
-<operation name="createStage">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/createStageRequest" message="tns:createStage"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/createStageResponse" message="tns:createStageResponse"/>
-</operation>
-<operation name="logIn">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/logInRequest" message="tns:logIn"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/logInResponse" message="tns:logInResponse"/>
-</operation>
-<operation name="registerUser">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/registerUserRequest" message="tns:registerUser"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/registerUserResponse" message="tns:registerUserResponse"/>
-</operation>
-<operation name="getAllSiteManagers">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/getAllSiteManagersRequest" message="tns:getAllSiteManagers"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/getAllSiteManagersResponse" message="tns:getAllSiteManagersResponse"/>
-</operation>
-<operation name="getNotificationsOfUser">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/getNotificationsOfUserRequest" message="tns:getNotificationsOfUser"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/getNotificationsOfUserResponse" message="tns:getNotificationsOfUserResponse"/>
-</operation>
-<operation name="discardNotification">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/discardNotificationRequest" message="tns:discardNotification"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/discardNotificationResponse" message="tns:discardNotificationResponse"/>
-</operation>
-<operation name="getAllNotifications">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/getAllNotificationsRequest" message="tns:getAllNotifications"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/getAllNotificationsResponse" message="tns:getAllNotificationsResponse"/>
-</operation>
-<operation name="getOrdersBySupplier">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/getOrdersBySupplierRequest" message="tns:getOrdersBySupplier"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/getOrdersBySupplierResponse" message="tns:getOrdersBySupplierResponse"/>
-</operation>
-<operation name="getMessagesOfStage">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/getMessagesOfStageRequest" message="tns:getMessagesOfStage"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/getMessagesOfStageResponse" message="tns:getMessagesOfStageResponse"/>
-</operation>
-<operation name="getServicesOfUser">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/getServicesOfUserRequest" message="tns:getServicesOfUser"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/getServicesOfUserResponse" message="tns:getServicesOfUserResponse"/>
-</operation>
-<operation name="assignWorker">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/assignWorkerRequest" message="tns:assignWorker"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/assignWorkerResponse" message="tns:assignWorkerResponse"/>
-</operation>
-<operation name="assignSiteManager">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/assignSiteManagerRequest" message="tns:assignSiteManager"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/assignSiteManagerResponse" message="tns:assignSiteManagerResponse"/>
-</operation>
-<operation name="getUnseenNotificationsOfUser">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/getUnseenNotificationsOfUserRequest" message="tns:getUnseenNotificationsOfUser"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/getUnseenNotificationsOfUserResponse" message="tns:getUnseenNotificationsOfUserResponse"/>
-</operation>
-<operation name="setCost">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/setCostRequest" message="tns:setCost"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/setCostResponse" message="tns:setCostResponse"/>
-</operation>
-<operation name="createService">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/createServiceRequest" message="tns:createService"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/createServiceResponse" message="tns:createServiceResponse"/>
-</operation>
-<operation name="getAllServices">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/getAllServicesRequest" message="tns:getAllServices"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/getAllServicesResponse" message="tns:getAllServicesResponse"/>
-</operation>
-<operation name="getUser">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/getUserRequest" message="tns:getUser"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/getUserResponse" message="tns:getUserResponse"/>
-</operation>
-<operation name="getAllWorkers">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/getAllWorkersRequest" message="tns:getAllWorkers"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/getAllWorkersResponse" message="tns:getAllWorkersResponse"/>
-</operation>
-<operation name="changePassword">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/changePasswordRequest" message="tns:changePassword"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/changePasswordResponse" message="tns:changePasswordResponse"/>
-</operation>
-<operation name="getOrder">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/getOrderRequest" message="tns:getOrder"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/getOrderResponse" message="tns:getOrderResponse"/>
-</operation>
-<operation name="createMessage">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/createMessageRequest" message="tns:createMessage"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/createMessageResponse" message="tns:createMessageResponse"/>
-</operation>
-<operation name="finishStage">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/finishStageRequest" message="tns:finishStage"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/finishStageResponse" message="tns:finishStageResponse"/>
-</operation>
-<operation name="getAllStages">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/getAllStagesRequest" message="tns:getAllStages"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/getAllStagesResponse" message="tns:getAllStagesResponse"/>
-</operation>
-<operation name="createOrder">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/createOrderRequest" message="tns:createOrder"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/createOrderResponse" message="tns:createOrderResponse"/>
-</operation>
-<operation name="getServicesOfWorker">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/getServicesOfWorkerRequest" message="tns:getServicesOfWorker"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/getServicesOfWorkerResponse" message="tns:getServicesOfWorkerResponse"/>
-</operation>
-<operation name="getServicesOfSiteManager">
-<input wsam:Action="http://pdms.me.org/PDMSWebService/getServicesOfSiteManagerRequest" message="tns:getServicesOfSiteManager"/>
-<output wsam:Action="http://pdms.me.org/PDMSWebService/getServicesOfSiteManagerResponse" message="tns:getServicesOfSiteManagerResponse"/>
+<operation name="getUserType">
+<input wsam:Action="http://pdms.me.org/PDMSWebService/getUserTypeRequest" message="tns:getUserType"/>
+<output wsam:Action="http://pdms.me.org/PDMSWebService/getUserTypeResponse" message="tns:getUserTypeResponse"/>
 </operation>
 </portType>
 <binding name="PDMSWebServicePortBinding" type="tns:PDMSWebService">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="getAllOrders">
+<operation name="changePassword">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -367,7 +127,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="getAllMessages">
+<operation name="getUserName">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -376,7 +136,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="getOrdersByStage">
+<operation name="logIn">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -385,7 +145,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="deliverOrder">
+<operation name="getUser">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -394,7 +154,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="getService">
+<operation name="createElection">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -403,7 +163,16 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="getStage">
+<operation name="registerUser">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="getAllCandidates">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -430,7 +199,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="getAllSuppliers">
+<operation name="getAllVoters">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -439,232 +208,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="createStage">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="logIn">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="registerUser">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="getAllSiteManagers">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="getNotificationsOfUser">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="discardNotification">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="getAllNotifications">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="getOrdersBySupplier">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="getMessagesOfStage">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="getServicesOfUser">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="assignWorker">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="assignSiteManager">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="getUnseenNotificationsOfUser">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="setCost">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="createService">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="getAllServices">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="getUser">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="getAllWorkers">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="changePassword">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="getOrder">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="createMessage">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="finishStage">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="getAllStages">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="createOrder">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="getServicesOfWorker">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="getServicesOfSiteManager">
+<operation name="getUserType">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

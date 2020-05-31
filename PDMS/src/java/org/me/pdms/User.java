@@ -10,8 +10,8 @@ import java.util.Calendar;
 public class User {
     
     public final static int ADMIN = 0;
-    public final static int CANDIDATE = 1;
-    public final static int VOTER = 2;
+    public final static int VOTER = 1;
+    public final static int CANDIDATE = 2;
     
     private final int id;
     private final int type;

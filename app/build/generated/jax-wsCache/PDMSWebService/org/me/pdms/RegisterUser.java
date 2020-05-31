@@ -23,10 +23,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="password" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="birthdate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
- *         &lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="phone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="qualifications" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="materials" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="organisation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -42,10 +40,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "password",
     "name",
     "birthdate",
-    "email",
-    "phone",
-    "qualifications",
-    "materials"
+    "organisation",
+    "description"
 })
 public class RegisterUser {
 
@@ -55,10 +51,8 @@ public class RegisterUser {
     protected String name;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar birthdate;
-    protected String email;
-    protected String phone;
-    protected String qualifications;
-    protected String materials;
+    protected String organisation;
+    protected String description;
 
     /**
      * Gets the value of the type property.
@@ -173,99 +167,51 @@ public class RegisterUser {
     }
 
     /**
-     * Gets the value of the email property.
+     * Gets the value of the organisation property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getEmail() {
-        return email;
+    public String getOrganisation() {
+        return organisation;
     }
 
     /**
-     * Sets the value of the email property.
+     * Sets the value of the organisation property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setEmail(String value) {
-        this.email = value;
+    public void setOrganisation(String value) {
+        this.organisation = value;
     }
 
     /**
-     * Gets the value of the phone property.
+     * Gets the value of the description property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getPhone() {
-        return phone;
+    public String getDescription() {
+        return description;
     }
 
     /**
-     * Sets the value of the phone property.
+     * Sets the value of the description property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setPhone(String value) {
-        this.phone = value;
-    }
-
-    /**
-     * Gets the value of the qualifications property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getQualifications() {
-        return qualifications;
-    }
-
-    /**
-     * Sets the value of the qualifications property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setQualifications(String value) {
-        this.qualifications = value;
-    }
-
-    /**
-     * Gets the value of the materials property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getMaterials() {
-        return materials;
-    }
-
-    /**
-     * Sets the value of the materials property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setMaterials(String value) {
-        this.materials = value;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
 }

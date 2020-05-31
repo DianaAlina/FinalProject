@@ -3,34 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/model/User.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/app/BookServiceController.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/META-INF/wsdl/localhost_20055/PDMS/PDMSWebService.xsd_1.xsd</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/app/NotiCell.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/app/RegUsPane.fxml</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/app/RegisterClientController.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/app/MessageController.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/app/TabController.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/META-INF/wsdl/localhost_8080/PDMS/PDMSWebService.xsd_1.xsd</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/app/HomeController.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/META-INF/jax-ws-catalog.xml</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/app/LoginPage.fxml</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/META-INF/wsdl/localhost_8080/PDMS/PDMSWebService.wsdl</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/model/ServicePDMS.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/app/OrderPaneController.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/app/MessageCell.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/app/ChangePassController.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/model/Order.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/META-INF/wsdl/localhost_20055/PDMS/PDMSWebService.wsdl</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/app/App.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/app/HomePaneController.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/model/Notification.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/app/OrderCell.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/app/RegisterClient.fxml</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/app/LoginController.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/app/RegisterController.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/model/Message.java</file>
-            <file>file:/Users/diana/Documents/essproject-techie-tribe-master/app/src/model/StagePDMS.java</file>
+            <file>file:/Users/diana/Documents/FinalProject/app/src/app/RegisterUserController.java</file>
+            <file>file:/Users/diana/Documents/FinalProject/app/src/app/TabPane.fxml</file>
+            <file>file:/Users/diana/Documents/FinalProject/app/src/app/TabController.java</file>
         </group>
     </open-files>
 </project-private>

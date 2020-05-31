@@ -15,8 +15,6 @@ import javafx.scene.control.Tab;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import model.ServicePDMS;
-import model.StagePDMS;
 import model.User;
 
 /**
@@ -104,14 +102,8 @@ public class HomeController implements Initializable {
     private static String registerUser(int type, java.lang.String username, java.lang.String password, java.lang.String name, javax.xml.datatype.XMLGregorianCalendar birthdate, java.lang.String organisation, java.lang.String description) {
         org.me.pdms.PDMSWebService_Service service = new org.me.pdms.PDMSWebService_Service();
         org.me.pdms.PDMSWebService port = service.getPDMSWebServicePort();
-        return port.registerUser(type, username, password, name, birthdate, organisation, description, null, null);
+        return port.registerUser(type, username, password, name, birthdate, organisation, description);
     }        
-
-    private static String getServicesOfUser(int userID) {
-        org.me.pdms.PDMSWebService_Service service = new org.me.pdms.PDMSWebService_Service();
-        org.me.pdms.PDMSWebService port = service.getPDMSWebServicePort();
-        return port.getServicesOfUser(userID);
-    }
     
     private static String getUser(java.lang.String username) {
         org.me.pdms.PDMSWebService_Service service = new org.me.pdms.PDMSWebService_Service();
