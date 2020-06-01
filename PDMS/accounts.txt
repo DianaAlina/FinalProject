@@ -1,1 +1,5 @@
-{"id":0,"type":0,"username":"diana","password":"diana","name":"Diana","birthdate":{"year":2000,"month":4,"dayOfMonth":1,"hourOfDay":0,"minute":0,"second":0}}
+{"id":0,"type":0,"username":"admin","password":"admin","name":"ADMIN","birthdate":{"year":2001,"month":1,"dayOfMonth":1,"hourOfDay":0,"minute":0,"second":0},"organisation":"admin","description":"administrator"}
+{"id":1,"type":2,"username":"c1","password":"c1","name":"C1","birthdate":{"year":2000,"month":4,"dayOfMonth":21,"hourOfDay":0,"minute":0,"second":0},"organisation":"c1","description":"c1"}
+{"id":2,"type":2,"username":"c2","password":"c2","name":"C2","birthdate":{"year":2000,"month":4,"dayOfMonth":8,"hourOfDay":0,"minute":0,"second":0},"organisation":"c2","description":"c2"}
+{"id":3,"type":2,"username":"c3","password":"c3","name":"C3","birthdate":{"year":2000,"month":4,"dayOfMonth":22,"hourOfDay":0,"minute":0,"second":0},"organisation":"c3","description":"c3"}
+{"id":4,"type":2,"username":"c4","password":"c4","name":"C4","birthdate":{"year":2000,"month":3,"dayOfMonth":27,"hourOfDay":0,"minute":0,"second":0},"organisation":"c4","description":"c4"}

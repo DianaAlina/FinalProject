@@ -169,7 +169,15 @@ public class TabController implements Initializable, HomePaneController {
     public void registerUs(ActionEvent ac) {
         
         try {
-            int type = cbType.getSelectionModel().getSelectedIndex()+1;
+            int type = 0;
+            String getUserType = (String) cbType.getValue();
+            if ("Voter".equals(getUserType)){
+                type = 1;
+            }
+            else if ("Candidate".equals(getUserType)){
+                type = 2;
+            }
+            //int type = cbType.getSelectionModel().getSelectedIndex()+1;
             String username = tfUsername.getText();
             String password = tfPassword.getText();
             String name = tfName.getText();

@@ -13,7 +13,7 @@ import javax.jws.WebParam;
 @WebService(serviceName = "PDMSWebService")
 public class PDMSWebService {
        
-    public final static String PATH = "/Users/diana/Documents/essproject-techie-tribe-master/PDMS/";
+    public final static String PATH = "/Users/diana/Documents/FinalProject/PDMS/";
     
     private final Gson gson = new Gson();
     
